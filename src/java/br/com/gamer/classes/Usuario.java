@@ -1,44 +1,42 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.gamer.classes;
 
-/**
- *
- * @author Projeto integrado
- */
 public class Usuario {
     
-    private int ID;
-    private String Login;
-    private String Senha;
+    private int id;
+    private String email;
+    private String senha;
+    private String nome;
 
-    public int getID() {
-        return ID;
+    public int getId() {
+        return id;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getLogin() {
-        return Login;
+    public String getEmail() {
+        return email;
     }
 
-    public void setLogin(String Login) {
-        this.Login = Login;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getSenha() {
-        return Senha;
+        return senha;
     }
 
-    public void setSenha(String Senha) {
-        this.Senha = Senha;
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
-    
-    
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
     
 }
