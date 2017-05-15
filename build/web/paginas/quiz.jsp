@@ -8,9 +8,9 @@
     Pergunta perg = new Pergunta();
     
     perg = pergDao.getRNDPergunta();
-    session.setAttribute("qizCerto", perg.getId());
     
-    
+    session.setAttribute("qizCerto", perg.getCorreta());
+ 
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -31,7 +31,7 @@
                 
                 for (Escolha e: c) {
                     
-                    out.write("<li>" + e.getDescricao() + "</li>");
+                    out.write("<li><a href='/gamerQuiz/processResp?p=" + e.getId() + "'>" + e.getDescricao() + "</li>");
                     
                 }
                 

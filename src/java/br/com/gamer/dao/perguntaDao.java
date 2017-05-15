@@ -11,7 +11,7 @@ public class perguntaDao extends escolhaDao {
 
     public Pergunta getRNDPergunta() {
 
-        String query = "SELECT * FROM `pergunta` LIMIT 1";
+        String query = "SELECT * FROM `pergunta` ORDER BY RAND() LIMIT 1";
         this.conectar();
 
         Pergunta c = new Pergunta();
@@ -30,8 +30,9 @@ public class perguntaDao extends escolhaDao {
                 escolhas = this.getEscolhas(c.getId());
 
                 c.setEscolhas(escolhas);
-                c.setCorreta(rs.getInt("correta"));
+                c.setCorreta(rs.getString("correta"));
                 c.setDescricao(rs.getString("descricao"));
+                c.setCategoria_id(rs.getInt("categoria_id"));
 
             }
 

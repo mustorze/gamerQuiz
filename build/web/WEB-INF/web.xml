@@ -8,6 +8,10 @@
         <servlet-name>iniciarNovo</servlet-name>
         <servlet-class>br.com.gamer.servlets.iniciarNovo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>processResp</servlet-name>
+        <servlet-class>br.com.gamer.servlets.processResp</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>postLogin</servlet-name>
         <url-pattern>/postLogin</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>iniciarNovo</servlet-name>
         <url-pattern>/iniciarNovo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>processResp</servlet-name>
+        <url-pattern>/processResp</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -5,8 +5,9 @@ import java.util.ArrayList;
 public class Pergunta {
     
     private int id;
+    private int categoria_id;
     private String descricao;
-    private int correta;
+    private String correta;
     
     private ArrayList<Escolha> escolhas;
 
@@ -18,6 +19,14 @@ public class Pergunta {
         this.id = id;
     }
 
+    public int getCategoria_id() {
+        return categoria_id;
+    }
+
+    public void setCategoria_id(int categoria_id) {
+        this.categoria_id = categoria_id;
+    }
+
     public String getDescricao() {
         return descricao;
     }
@@ -26,13 +35,15 @@ public class Pergunta {
         this.descricao = descricao;
     }
 
-    public int getCorreta() {
+    public String getCorreta() {
         return correta;
     }
 
-    public void setCorreta(int correta) {
+    public void setCorreta(String correta) {
         this.correta = correta;
     }
+    
+    
 
     public ArrayList<Escolha> getEscolhas() {
         return escolhas;
