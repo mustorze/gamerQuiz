@@ -1,6 +1,5 @@
 package br.com.gamer.servlets;
 
-import br.com.gamer.dao.loginDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -9,35 +8,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class postLogin extends HttpServlet {
+public class iniciarNovo extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
         response.setContentType("text/html;charset=UTF-8");
+
         try (PrintWriter out = response.getWriter()) {
             
             HttpSession session = request.getSession();
             
-            String email = request.getParameter("email");
-            String senha = request.getParameter("senha");
+            session.setAttribute( "qizStatus", "1" );
+            session.setAttribute( "qizAcertos", "0" );
             
-            loginDao l = new loginDao();
-            
-            boolean ok = l.logar(email, senha);
-            
-            if (ok == true) {
-                
-                session.setAttribute( "usrLogado", "1" );
-                response.sendRedirect("/gamerQuiz/");
-                
-            } else {
-                
-                session.setAttribute( "usrLogado", "0" );
-                response.sendRedirect("/gamerQuiz/?e=true");
-                
-            }
-            
+            response.sendRedirect("/gamerQuiz/?p=quiz");
+
         }
     }
 

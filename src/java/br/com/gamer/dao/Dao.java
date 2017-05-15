@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.gamer.dao;
 
 import com.mysql.jdbc.Connection;
@@ -12,10 +7,6 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author Projeto integrado
- */
 public class Dao {
 
     private String servidor;
@@ -45,9 +36,7 @@ public class Dao {
 
             conn = (Connection) DriverManager.getConnection(url, usuario, senha);
 
-        } catch (SQLException ex) {
-            Logger.getLogger(Dao.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
+        } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(Dao.class.getName()).log(Level.SEVERE, null, ex);
         }
 

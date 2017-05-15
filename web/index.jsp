@@ -1,3 +1,4 @@
+<%@page import="br.com.gamer.dao.loginDao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -6,17 +7,37 @@
         <title>GamerQuiz</title>
     </head>
     <body>
-        <h1>Login</h1>
-        <div>
-            <form method="POST" action="/postLogin">
-                <table>
-                    <tbody>
-                        <tr><td>Login</td><td><input type="text" name="login"></td></tr>
-                        <tr><td>Senha</td><td><input type="text" name="senha"></td></tr>
-                        <tr><td colspan="2"><input type="submit" name="submit"></td></tr>
-                    </tbody>
-                </table>
-            </form>
-        </div>
+
+        <%
+
+            loginDao l = new loginDao();
+            String p = request.getParameter("p");
+
+            if (l.checarLogado(request) == true) {
+
+                if ("quiz".equals(p)) {
+
+        %>
+
+        <%@include file="paginas/quiz.jsp" %>
+
+        <%                } else {
+
+        %>
+
+        <%@include file="paginas/in.jsp" %>
+
+        <%                    }
+
+        } else {
+
+        %>
+
+        <%@include file="paginas/login.jsp" %>
+
+        <%                    }
+
+        %>
+
     </body>
 </html>
