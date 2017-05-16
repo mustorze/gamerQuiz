@@ -20,6 +20,12 @@
         %>
 
         <%@include file="paginas/quiz.jsp" %>
+        
+        <%                } else if ("rank".equals(p)) {
+
+        %>
+        
+        <%@include file="paginas/rank.jsp" %>
 
         <%                } else {
 

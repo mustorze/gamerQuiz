@@ -8,6 +8,7 @@ public class Resultado {
     private int usuario_id;
     private int pontuacao;
     private Date data;
+    private String usuario_nome;
 
     public int getId() {
         return id;
@@ -39,6 +40,14 @@ public class Resultado {
 
     public void setData(Date data) {
         this.data = data;
+    }
+
+    public String getUsuario_nome() {
+        return usuario_nome;
+    }
+
+    public void setUsuario_nome(String usuario_nome) {
+        this.usuario_nome = usuario_nome;
     }
     
     
