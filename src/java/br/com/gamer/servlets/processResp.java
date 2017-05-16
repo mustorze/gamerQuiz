@@ -1,5 +1,6 @@
 package br.com.gamer.servlets;
 
+import br.com.gamer.dao.resultadoDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -14,26 +15,38 @@ public class processResp extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            
+
             HttpSession session = request.getSession();
-            
+
             String p = request.getParameter("p");
-            
+
             String qizCerto = (String) session.getAttribute("qizCerto");
             String qizAcertos = session.getAttribute("qizAcertos").toString();
-            
+
+            String usrID = session.getAttribute("usrID").toString();
+
             out.write(qizCerto);
-            
-            if(qizCerto.equals(p)) {
-                
-                int o = Integer.parseInt(qizAcertos);
-                
-                session.setAttribute( "qizAcertos", (o + 1) );
-                
+            int o = Integer.parseInt(qizAcertos);
+
+            if (qizCerto.equals(p)) {
+
+                session.setAttribute("qizAcertos", (o + 1));
+
+            } else {
+
+                resultadoDao rx = new resultadoDao();
+                boolean ldfgfd = rx.gravaResultado(Integer.parseInt(usrID), o);
+
+                if (ldfgfd) {
+                    session.setAttribute("qizCerto", "0");
+                    response.sendRedirect("/gamerQuiz/");
+                    return;
+                }
+
             }
-            
+
             response.sendRedirect("/gamerQuiz/?p=quiz");
-            
+
         }
     }
 

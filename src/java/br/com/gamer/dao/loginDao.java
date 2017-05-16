@@ -9,23 +9,29 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 public class loginDao extends Dao {
-    
-    public boolean logar(String email, String senha) {
+
+    public int logar(String email, String senha) {
 
         try {
 
             this.conectar();
-            String query = "SELECT email, senha FROM usuario WHERE email = '" + email + "' AND senha = '" + senha + "'";
+            String query = "SELECT id, email, senha FROM usuario WHERE email = '" + email + "' AND senha = '" + senha + "'";
 
             this.stmt = (PreparedStatement) this.conn.prepareStatement(query);
             ResultSet rs = this.stmt.executeQuery(query);
 
-            return rs.next();
+            if (rs.next()) {
+
+                return rs.getInt("id");
+
+            }
+
+            return 0;
 
         } catch (SQLException ex) {
 
             Logger.getLogger(loginDao.class.getName()).log(Level.SEVERE, null, ex);
-            return false;
+            return 0;
 
         }
 
@@ -38,5 +44,5 @@ public class loginDao extends Dao {
         return "1".equals(session.getAttribute("usrLogado"));
 
     }
-    
+
 }

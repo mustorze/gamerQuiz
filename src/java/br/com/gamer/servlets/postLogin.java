@@ -13,31 +13,32 @@ public class postLogin extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            
+
             HttpSession session = request.getSession();
-            
+
             String email = request.getParameter("email");
             String senha = request.getParameter("senha");
-            
+
             loginDao l = new loginDao();
-            
-            boolean ok = l.logar(email, senha);
-            
-            if (ok == true) {
-                
-                session.setAttribute( "usrLogado", "1" );
+
+            int ok = l.logar(email, senha);
+
+            if (ok > 0) {
+
+                session.setAttribute("usrLogado", "1");
+                session.setAttribute("usrID", ok);
                 response.sendRedirect("/gamerQuiz/");
-                
+
             } else {
-                
-                session.setAttribute( "usrLogado", "0" );
+
+                session.setAttribute("usrLogado", "0");
                 response.sendRedirect("/gamerQuiz/?e=true");
-                
+
             }
-            
+
         }
     }
 
