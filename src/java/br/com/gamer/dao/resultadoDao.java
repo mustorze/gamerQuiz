@@ -57,7 +57,7 @@ public class resultadoDao extends Dao {
 
             }
 
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.err.println("Got an exception! ");
             System.err.println(e.getMessage());
         }

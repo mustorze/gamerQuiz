@@ -3,6 +3,7 @@ package br.com.gamer.dao;
 import br.com.gamer.classes.Escolha;
 import com.mysql.jdbc.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class escolhaDao extends Dao {
@@ -31,7 +32,7 @@ public class escolhaDao extends Dao {
 
             }
 
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.err.println("Got an exception! ");
             System.err.println(e.getMessage());
         }

@@ -9,4 +9,5 @@
             </tbody>
         </table>
     </form>
+    <a href="?p=cadastro">Cadastro</a>
 </div>

@@ -20,11 +20,11 @@
         %>
 
         <%@include file="paginas/quiz.jsp" %>
-        
+
         <%                } else if ("rank".equals(p)) {
 
         %>
-        
+
         <%@include file="paginas/rank.jsp" %>
 
         <%                } else {
@@ -37,11 +37,21 @@
 
         } else {
 
+            if ("cadastro".equals(p)) {
+
+        %>
+
+        <%@include file="paginas/cadastro.jsp" %>
+
+        <%                    } else {
+
         %>
 
         <%@include file="paginas/login.jsp" %>
 
-        <%                    }
+        <%                }
+
+            }
 
         %>
 
