@@ -21,6 +21,18 @@
 
 <%@include file="categoria/index.jsp" %>
 
+<%} else if ("escolhas".equals(f)) {
+
+%>
+
+<%@include file="escolhas/index.jsp" %>
+
+<%} else if ("perguntas".equals(f)) {
+
+%>
+
+<%@include file="perguntas/index.jsp" %>
+
 <%} else {
 
 %>
@@ -34,6 +46,10 @@
             response.sendRedirect("/gamerQuiz/");
 
         }
+
+    } else {
+
+        response.sendRedirect("/gamerQuiz/");
 
     }
 

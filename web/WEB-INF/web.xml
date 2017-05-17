@@ -20,7 +20,6 @@
         <servlet-name>pegarPergunta</servlet-name>
         <servlet-class>br.com.gamer.servlets.pegarPergunta</servlet-class>
     </servlet>
-    
     <servlet>
         <servlet-name>salvarCategoria</servlet-name>
         <servlet-class>br.com.gamer.servlets.admCat.salvarCategoria</servlet-class>
@@ -33,7 +32,46 @@
         <servlet-name>criarCategoria</servlet-name>
         <servlet-class>br.com.gamer.servlets.admCat.criarCategoria</servlet-class>
     </servlet>
-    
+    <servlet>
+        <servlet-name>salvarPergunta</servlet-name>
+        <servlet-class>br.com.gamer.servlets.admCat.salvarPergunta</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>excluirPergunta</servlet-name>
+        <servlet-class>br.com.gamer.servlets.admCat.excluirPergunta</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>criarPergunta</servlet-name>
+        <servlet-class>br.com.gamer.servlets.admCat.criarPergunta</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>escolhaCerta</servlet-name>
+        <servlet-class>br.com.gamer.servlets.admCat.escolhaCerta</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>criarEscolha</servlet-name>
+        <servlet-class>br.com.gamer.servlets.admCat.criarEscolha</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>excluirEscolha</servlet-name>
+        <servlet-class>br.com.gamer.servlets.admCat.excluirEscolha</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>salvarEscolha</servlet-name>
+        <servlet-class>br.com.gamer.servlets.admCat.salvarEscolha</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>salvarPergunta</servlet-name>
+        <url-pattern>/salvarPergunta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>excluirPergunta</servlet-name>
+        <url-pattern>/excluirPergunta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>criarPergunta</servlet-name>
+        <url-pattern>/criarPergunta</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>salvarCategoria</servlet-name>
         <url-pattern>/salvarCategoria</url-pattern>
@@ -46,7 +84,6 @@
         <servlet-name>criarCategoria</servlet-name>
         <url-pattern>/criarCategoria</url-pattern>
     </servlet-mapping>
-    
     <servlet-mapping>
         <servlet-name>postLogin</servlet-name>
         <url-pattern>/postLogin</url-pattern>
@@ -66,6 +103,22 @@
     <servlet-mapping>
         <servlet-name>pegarPergunta</servlet-name>
         <url-pattern>/pegarPergunta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>escolhaCerta</servlet-name>
+        <url-pattern>/escolhaCerta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>criarEscolha</servlet-name>
+        <url-pattern>/criarEscolha</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>excluirEscolha</servlet-name>
+        <url-pattern>/excluirEscolha</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>salvarEscolha</servlet-name>
+        <url-pattern>/salvarEscolha</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
