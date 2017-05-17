@@ -1,61 +1,58 @@
-package br.com.gamer.servlets;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package br.com.gamer.servlets.admCat;
 
-import br.com.gamer.classes.Usuario;
-import br.com.gamer.dao.loginDao;
+import br.com.gamer.classes.Categoria;
+import br.com.gamer.dao.categoriaDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-public class postLogin extends HttpServlet {
+/**
+ *
+ * @author Projeto integrado
+ */
+public class criarCategoria extends HttpServlet {
 
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-
-            HttpSession session = request.getSession();
-
-            String email = request.getParameter("email");
-            String senha = request.getParameter("senha");
-
-            loginDao l = new loginDao();
-
-            int ok = l.logar(email, senha);
-
-            if (ok > 0) {
-
-                Usuario usr;
-
-                usr = l.buscarUsr(ok);
-
-                if (usr.getAdmin() > 0) {
-
-                    session.setAttribute("usrLogado", "1");
-                    session.setAttribute("usrID", ok);
-                    session.setAttribute("usrADM", "1");
-                    response.sendRedirect("/gamerQuiz/admin");
-
-                } else {
-
-                    session.setAttribute("usrLogado", "1");
-                    session.setAttribute("usrID", ok);
-                    session.setAttribute("usrADM", "0");
-                    response.sendRedirect("/gamerQuiz/");
-
-                }
-
+            
+            String nome = request.getParameter("nome");
+            
+            Categoria c = new Categoria();
+            c.setNome(nome);
+            
+            categoriaDao l = new categoriaDao();
+            
+            boolean ok = l.criar(c);
+            
+            if (ok == true) {
+                
+                response.sendRedirect("admin/index.jsp?f=categorias&c=ok");
+                
             } else {
-
-                session.setAttribute("usrLogado", "0");
-                response.sendRedirect("/gamerQuiz/?e=true");
-
+                
+                response.sendRedirect("admin/index.jsp?f=categorias&c=erro");
+                
             }
-
+            
         }
     }
 

@@ -6,6 +6,7 @@ public class Usuario {
     private String email;
     private String senha;
     private String nome;
+    private int admin;
 
     public int getId() {
         return id;
@@ -37,6 +38,14 @@ public class Usuario {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public int getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(int admin) {
+        this.admin = admin;
     }
     
 }

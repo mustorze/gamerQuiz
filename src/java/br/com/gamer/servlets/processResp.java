@@ -34,13 +34,23 @@ public class processResp extends HttpServlet {
 
             } else {
 
-                resultadoDao rx = new resultadoDao();
-                boolean ldfgfd = rx.gravaResultado(Integer.parseInt(usrID), o);
+                if (o > 0) {
 
-                if (ldfgfd) {
+                    resultadoDao rx = new resultadoDao();
+                    boolean ldfgfd = rx.gravaResultado(Integer.parseInt(usrID), o);
+
+                    if (ldfgfd) {
+                        session.setAttribute("qizCerto", "0");
+                        response.sendRedirect("/gamerQuiz/");
+                        return;
+                    }
+
+                } else {
+
                     session.setAttribute("qizCerto", "0");
                     response.sendRedirect("/gamerQuiz/");
                     return;
+
                 }
 
             }

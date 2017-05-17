@@ -1,5 +1,6 @@
 package br.com.gamer.dao;
 
+import br.com.gamer.classes.Usuario;
 import com.mysql.jdbc.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -32,6 +33,42 @@ public class loginDao extends Dao {
 
             Logger.getLogger(loginDao.class.getName()).log(Level.SEVERE, null, ex);
             return 0;
+
+        }
+
+    }
+
+    public Usuario buscarUsr(int id) {
+
+        try {
+
+            this.conectar();
+            String query = "SELECT id, email, admin, nome FROM usuario WHERE id = '" + id + "'";
+
+            this.stmt = (PreparedStatement) this.conn.prepareStatement(query);
+            ResultSet rs = this.stmt.executeQuery(query);
+
+            if (rs.next()) {
+
+                Usuario usr = new Usuario();
+                
+                usr.setId(id);
+                usr.setEmail(rs.getString("email"));
+                usr.setAdmin(rs.getInt("admin"));
+                usr.setNome(rs.getString("nome"));
+                
+                return usr;
+
+            } else {
+
+                return null;
+
+            }
+
+        } catch (SQLException ex) {
+
+            Logger.getLogger(loginDao.class.getName()).log(Level.SEVERE, null, ex);
+            return null;
 
         }
 
