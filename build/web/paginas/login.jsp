@@ -1,13 +1,78 @@
-<h1>Login</h1>
-<div>
-    <form method="POST" action="/gamerQuiz/postLogin">
-        <table>
-            <tbody>
-                <tr><td>Email</td><td><input type="text" name="email"></td></tr>
-                <tr><td>Senha</td><td><input type="text" name="senha"></td></tr>
-                <tr><td colspan="2"><input type="submit" name="submit"></td></tr>
-            </tbody>
-        </table>
-    </form>
-    <a href="?p=cadastro">Cadastro</a>
-</div>
+<%
+
+    String ec = request.getParameter("ec");
+    String e = request.getParameter("e");
+
+%>
+<content>
+
+        <div class="container_24">
+
+            <div class="grid_24">
+
+                <div>
+
+                    <form method="POST" class="form_type" id="frmLogin" action="/gamerQuiz/postLogin">
+                        <div class="dBtn">
+                            <button class="bntAzul">Logar com Facebook</button><button class="bntAzul bntCad">Cadastrar</button>
+                        </div>
+
+                        <div class="inputs">
+
+                            <div>
+                                <input type="text" placeholder="Email" name="email">
+                            </div>
+
+                            <div>
+                                <input type="text" placeholder="Senha" name="senha">
+                            </div>
+
+                        </div>
+
+                        <div class="dBtn">
+
+                            <div class="alwaysOn">
+                                <input type="checkbox">
+                                <span>Manter conectado?</span>
+                            </div>
+
+                            <button form="frmLogin">Iniciar</button>
+
+                        </div>
+                        
+                        <%                            if ("true".equals(e)) {
+
+                    %>        
+
+                    <div>
+
+                        <span class="errorForm">Email ou senha invalidos!</span>
+
+                    </div>
+
+                    <%                            }
+
+                    %>
+                    
+                    <%                            if ("ok".equals(ec)) {
+
+                    %>        
+
+                    <div>
+
+                        <span class="sucessForm">Cadastro realizado com sucesso!</span>
+
+                    </div>
+
+                    <%                            }
+
+                    %>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+    </content>

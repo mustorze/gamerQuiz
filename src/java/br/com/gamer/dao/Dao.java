@@ -20,7 +20,7 @@ public class Dao {
     public Dao() {
 
         this.servidor = "localhost";
-        this.banco = "gamerQuiz";
+        this.banco = "gamerquiz";
         this.usuario = "root";
         this.senha = "";
 

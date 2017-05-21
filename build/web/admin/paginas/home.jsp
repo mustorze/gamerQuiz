@@ -1,16 +1,25 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Administrador Quiz</title>
-    </head>
-    <body>
-        
-        <ul>
-            <li><a href="?f=categorias">Categorias</a></li>
-            <li><a href="?f=perguntas">Perguntas</a></li>
-        </ul>
-        
-    </body>
-</html>
+<div class="content-box">
+    <h1>Área Administrativa</h1>
+    <div class="content-box-large">
+        <div class="panel-body">
+
+            <div class="jumbotron">
+                <div stlye="display: inline-block;">
+                    <h1 style="display: inline-block;">Categorias</h1>
+                    <p style="font-size: 150px; float: right;"><i class="glyphicon glyphicon-th"></i></p>
+                </div>
+                <p><a class="btn btn-primary btn-lg" href="?f=categorias" role="button">Acessar</a></p>
+            </div>
+
+            <div class="jumbotron">
+                <div stlye="display: inline-block;">
+                    <h1 style="display: inline-block;">Perguntas</h1>
+                    <p style="font-size: 150px; float: right;"><i class="glyphicon glyphicon-comment"></i></p>
+                </div>
+                <p><a class="btn btn-primary btn-lg" href="?f=perguntas" role="button">Perguntas</a></p>
+            </div>
+
+        </div>
+    </div>
+</div>
+

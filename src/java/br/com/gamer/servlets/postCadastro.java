@@ -31,11 +31,11 @@ public class postCadastro extends HttpServlet {
 
             if (ok == true) {
 
-                response.sendRedirect("/gamerQuiz/");
+                response.sendRedirect("/gamerQuiz/?ec=ok");
 
             } else {
 
-                response.sendRedirect("/gamerQuiz/?ec=true");
+                response.sendRedirect("/gamerQuiz/?p=cadastro&ec=erro");
 
             }
             

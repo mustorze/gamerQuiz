@@ -12,7 +12,7 @@ public class escolhaDao extends Dao {
 
     public ArrayList<Escolha> getEscolhas(int id) {
 
-        String query = "SELECT * FROM `escolha` WHERE pergunta_id = '" + id + "'";
+        String query = "SELECT * FROM `escolha` WHERE pergunta_id = '" + id + "' ORDER BY RAND() ";
         this.conectar();
 
         ArrayList<Escolha> c = new ArrayList<>();

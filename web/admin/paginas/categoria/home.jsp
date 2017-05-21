@@ -1,50 +1,57 @@
 <%@page import="br.com.gamer.dao.categoriaDao"%>
 <%@page import="br.com.gamer.classes.Categoria"%>
 <%@page import="java.util.ArrayList"%>
-<h1>Categorias</h1>
-<a class="btn btn-default" href="index.jsp?f=categorias&p=criar"><i class="glyphicon glyphicon-eye-open"></i> Criar</a>
-<div>
-    <table cellpadding="0" cellspacing="0" border="0">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Ação</th>
-            </tr>
-        </thead>
-        <tbody>
+<div class="content-box">
+    <h1>Categorias</h1>
+    <a class="btn btn-default" href="index.jsp?f=categorias&p=criar"><i class="glyphicon glyphicon-eye-open"></i> Criar</a>
+    <div class="content-box-large">
+        <div class="panel-heading">
+            <div class="panel-title"></div>
+        </div>
+        <div class="panel-body">
+            <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-            <%
+                    <%
 
-                categoriaDao c = new categoriaDao();
-                ArrayList<Categoria> lx = new ArrayList<Categoria>();
+                        categoriaDao c = new categoriaDao();
+                        ArrayList<Categoria> lx = new ArrayList<Categoria>();
 
-                lx = c.categorias();
+                        lx = c.categorias();
 
-                int i = 1;
-                for (Categoria t : lx) {
+                        int i = 1;
+                        for (Categoria t : lx) {
 
-                    String nome = t.getNome();
-                    int id = t.getId();
+                            String nome = t.getNome();
+                            int id = t.getId();
 
-            %>
+                    %>
 
-            <tr>
-                <td><%=i%></td>
-                <td><%=nome%></td>
-                <td>
+                    <tr>
+                        <td><%=i%></td>
+                        <td><%=nome%></td>
+                        <td>
 
-                    <a href="index.jsp?f=categorias&p=editar&i=<%=id%>" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i> Editar</a>
-                    <a href="index.jsp?f=categorias&p=excluir&i=<%=id%>" class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> Deletar</a>
+                            <a href="index.jsp?f=categorias&p=editar&i=<%=id%>" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i> Editar</a>
+                            <a href="index.jsp?f=categorias&p=excluir&i=<%=id%>" class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> Deletar</a>
 
-                </td>
-            </tr>
+                        </td>
+                    </tr>
 
-            <%
-                    i++;
-                }
+                    <%
+                            i++;
+                        }
 
-            %>
-        </tbody>
-    </table>
+                    %>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>

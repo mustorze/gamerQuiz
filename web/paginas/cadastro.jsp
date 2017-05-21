@@ -1,13 +1,59 @@
-<h1>Cadastro</h1>
-<div>
-    <form method="POST" action="/gamerQuiz/postCadastro">
-        <table>
-            <tbody>
-                <tr><td>Email</td><td><input type="text" name="email"></td></tr>
-                <tr><td>Senha</td><td><input type="text" name="senha"></td></tr>
-                <tr><td>Nome</td><td><input type="text" name="nome"></td></tr>
-                <tr><td colspan="2"><input type="submit" name="submit" value="Realizar Cadastro"></td></tr>
-            </tbody>
-        </table>
-    </form>
-</div>
+<%
+
+    String ec = request.getParameter("ec");
+
+%>
+
+<content>
+
+    <div class="container_24">
+
+        <div class="grid_24">
+
+            <div>
+
+                <form method="POST" class="form_type" action="/gamerQuiz/postCadastro">
+                    <p>Preencha abaixo para realizar o cadastro</p>
+
+                    <div class="inputs">
+
+                        <div>
+                            <input type="text" placeholder="Email" name="email">
+                        </div>
+
+                        <div>
+                            <input type="text" placeholder="Senha" name="senha">
+                        </div>
+
+                        <div>
+                            <input type="text" placeholder="Nome" name="nome">
+                        </div>
+
+                    </div>
+
+                    <%                            if ("erro".equals(ec)) {
+
+                    %>        
+
+                    <div>
+
+                        <span class="errorForm">Usuario já existe!</span>
+
+                    </div>
+
+                    <%                            }
+
+                    %>
+
+                    <div class="dBtn">
+                        <button>Cadastrar</button><button class="bntVoltar"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Voltar</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+</content>

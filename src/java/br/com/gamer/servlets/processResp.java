@@ -41,14 +41,14 @@ public class processResp extends HttpServlet {
 
                     if (ldfgfd) {
                         session.setAttribute("qizCerto", "0");
-                        response.sendRedirect("/gamerQuiz/");
+                        response.sendRedirect("/gamerQuiz/?p=fim&pt=" + o);
                         return;
                     }
 
                 } else {
 
                     session.setAttribute("qizCerto", "0");
-                    response.sendRedirect("/gamerQuiz/");
+                    response.sendRedirect("/gamerQuiz/?p=fim&pt=" + o);
                     return;
 
                 }

@@ -65,5 +65,36 @@ public class resultadoDao extends Dao {
         return c;
         
     }
+    
+    public ArrayList<Resultado> resultadosByID(int id) {
+        
+        String query = "SELECT pontuacao FROM resultado WHERE usuario_id = '" + id + "' ORDER BY pontuacao DESC";
+        this.conectar();
+
+        ArrayList<Resultado> c = new ArrayList<>();
+
+        try {
+
+            this.stmt = (PreparedStatement) this.conn.prepareStatement(query);
+            ResultSet rs = this.stmt.executeQuery(query);
+
+            while (rs.next()) {
+
+                Resultado l = new Resultado();
+                
+                l.setPontuacao(rs.getInt(1));
+
+                c.add(l);
+
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Got an exception! ");
+            System.err.println(e.getMessage());
+        }
+
+        return c;
+        
+    }
 
 }

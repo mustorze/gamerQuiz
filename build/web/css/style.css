@@ -1,0 +1,343 @@
+/* ALL */
+
+@font-face {
+    font-family: 'Algerian';
+    src: url('../fonts/Algerian.eot');
+    src: url('../fonts/Algerian.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Algerian.woff') format('woff'),
+        url('../fonts/Algerian.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+
+    background: url('../img/bg.jpg') center top;
+    font-family: "Comic Sans MS";
+}
+
+/* APPLYABLE */
+
+.form_type {
+
+    width: 456px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px 25px;
+    border: 2px solid #1B3280;
+
+}
+
+.form_type p {
+
+    color: #000;
+    font-size: 21px;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    padding: 5px 10px;
+
+}
+
+.form_type table {
+
+    color: #33B5E5;
+    font-size: 21px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.form_type table tr td {
+
+    font-size: 20px;
+
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #33B5E5;
+}
+
+.form_type input {
+
+    width: 95%;
+    border: none;
+    border-bottom: 2px solid #33B5E5;
+    color: #33B5E5;
+    font-weight: bold;
+    font-family: "Comic sans MS";
+    padding: 10px;
+    outline: 0;
+
+}
+
+.form_type button {
+
+    font-size: 20px;
+    margin-top: 20px;
+    border: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 5px 15px;
+    font-family: "Comic Sans MS";
+    border-radius: 2px;
+
+}
+
+.form_type .errorForm {
+
+    text-align: center;
+    display: block;
+    color: #f00;
+
+}
+
+.form_type .sucessForm {
+
+    text-align: center;
+    display: block;
+    color: #0f0;
+
+}
+
+.dBtn {
+    display: flex;
+    justify-content: space-around;
+}
+
+.clear {
+    clear: both;
+}
+
+/* CONTENT */
+
+#headTop {
+
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+}
+
+#headTop h1 {
+
+    font-size: 5em;
+    font-family: "Algerian";
+    color: black;
+    font-weight: normal;
+
+}
+
+#headTop h2 {
+    text-align: right;
+    color: #fff;
+
+    font-size: 2em;
+}
+
+.perguntasDiv h3 {
+
+    color: #fff;
+
+    font-size: 2em;
+
+}
+
+.perguntinhas a {
+
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 0;
+
+    font-size: 2em;
+    border: 3px solid;
+    padding: 5px 10px;
+    text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+
+}
+
+.perguntinhas a:hover {
+
+    border-color: #0f0;
+    transition: all 0.5s;
+
+}
+
+.fimDiv h3 {
+
+    color: #fff;
+
+    font-size: 3em;
+    text-align: center;
+
+}
+
+.fimDiv p {
+
+    color: #fff;
+
+    font-size: 2em;
+    text-align: center;
+
+}
+
+.breadCrumb {
+    margin-top: 15px;
+}
+
+.breadCrumb ul {
+
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.breadCrumb ul li {
+
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+.breadCrumb ul li::after {
+
+    content: '>';
+    margin-right: 5px;
+    margin-left: 5px;
+
+}
+
+.breadCrumb ul li:last-child::after {
+    content: ""!important;
+    /*
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f149"!important;
+    margin-left: 5px!important;
+    */
+
+}
+
+.center button {
+    margin: 0 auto;
+    width: 70px;
+    display: block;
+}
+
+.frmFim h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.frmFim h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.bntRank, .bntAzul {
+    background-color: #5BC3EA!important;
+}
+
+.alwaysOn {
+    margin-top: 25px;
+}
+
+.alwaysOn input[type='checkbox'] {
+    width: auto;
+}
+
+.inputs {
+    margin: 15px;
+}
+
+.frmRank {
+    width: auto;
+}
+
+.frmRank h1 {
+    text-align: center;
+    font-size: 28px;
+}
+
+.frmRank table {
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
+}
+
+.frmRank table td {
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+}
+
+.frmIn h1 {
+
+    text-align: center;
+    font-size: 40px;
+
+}
+
+.frmIn li {
+    background-color: #5BC3EA;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.frmIn li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.frmQuiz ul {
+    margin: 10px;
+}
+
+.frmQuiz li {
+    border: 2px solid #5BC3EA;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.frmQuiz li a {
+    color: #5BC3EA;
+    text-decoration: none;
+}
+
+.frmQuiz h3 {
+    text-align: center;
+    color: #5BC3EA;
+    font-size: 30px;
+}
+
+.pontos {
+        margin-top: 10px;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.btnS {
+        color: #fff;
+    text-decoration: none;
+    background-color: #5bc3ea;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* asd */
+
+footer {
+    width: 100%;
+    border-top: 2px solid #1b3280;
+    margin-top: 40px;
+}

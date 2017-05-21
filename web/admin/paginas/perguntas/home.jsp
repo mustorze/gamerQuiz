@@ -2,7 +2,7 @@
 <%@page import="br.com.gamer.classes.Pergunta"%>
 <%@page import="java.util.ArrayList"%>
 <div class="content-box">
-    <h1>Produtos</h1>
+    <h1>Perguntas</h1>
     <a class="btn btn-default" href="index.jsp?f=perguntas&p=criar"><i class="glyphicon glyphicon-eye-open"></i> Criar</a>
     <div class="content-box-large">
         <div class="panel-heading">

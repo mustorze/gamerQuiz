@@ -19,22 +19,43 @@
     session.setAttribute("qizCerto", perg.getCorreta());
 
 %>
-<h1>Acertos: <%= session.getAttribute("qizAcertos")%></h1>
-<div>
-    <h2><%=perg.getDescricao()%></h2>
-    <h3><%=csafds.getNome()%></h3>
-    <ul>
-        <%
 
-            ArrayList<Escolha> c = new ArrayList<Escolha>();
-            c = perg.getEscolhas();
+<content>
 
-            for (Escolha e : c) {
+    <div class="container_24">
 
-                out.write("<li><a href='/gamerQuiz/processResp?p=" + e.getId() + "'>" + StringEscapeUtils.escapeHtml4(e.getDescricao()) + "</li>");
+        <div class="grid_24">
 
-            }
+            <div class="form_type frmQuiz">
 
-        %>
-    </ul>
-</div>
+                <h3><%=csafds.getNome()%></h3>
+                <h1><%=perg.getDescricao()%></h1>
+
+
+                <ul>
+                    <%
+
+                        ArrayList<Escolha> c = new ArrayList<Escolha>();
+                        c = perg.getEscolhas();
+
+                        for (Escolha e : c) {
+
+                            out.write("<li><a href='/gamerQuiz/processResp?p=" + e.getId() + "'>" + StringEscapeUtils.escapeHtml4(e.getDescricao()) + "</a></li>");
+
+                        }
+
+                    %>
+                </ul>
+
+            </div>
+
+            <div class="form_type pontos">
+
+                <h1>Acertos: <%= session.getAttribute("qizAcertos")%></h1>
+
+            </div>
+
+        </div>
+    </div>
+
+</content>

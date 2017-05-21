@@ -4,33 +4,73 @@
 <%
 
     ArrayList<Resultado> cdxz = new ArrayList<Resultado>();
+    ArrayList<Resultado> cdxzfsd = new ArrayList<Resultado>();
     resultadoDao gddff = new resultadoDao();
 
+    String usrID = session.getAttribute("usrID").toString();
+
     cdxz = gddff.resultados();
+    cdxzfsd = gddff.resultadosByID(Integer.parseInt(usrID));
 
     int ix = 1;
+    int iu = 1;
 %>
+<content>
 
-<h1>Melhores Resultados</h1>
-<div>
-    <table>
-        <thead>
-            <tr><td>Posição</td><td>Usuario</td><td>Pontos</td></tr>
-        </thead>
-        <tbody>
-            <%
-                for (Resultado gt : cdxz) {
+    <div class="container_24">
 
-            %>
+        <div class="grid_24">
 
-            <tr><td><%=ix%></td><td><%=gt.getUsuario_nome()%></td><td><%=gt.getPontuacao()%></td></tr>
+            <div class="grid_11">
+                <div class="form_type frmRank">
+                    <h1>Suas melhores pontuações</h1>
+                    <table>
+                        <tbody>
+                            <%
+                                for (Resultado gt : cdxzfsd) {
 
-            <%
+                            %>
 
-                ix++;
-                }
+                            <tr><td><%=iu%>°</td><td><%=gt.getPontuacao()%></td></tr>
 
-            %>
-        </tbody>
-    </table>
-</div>
+                            <%
+
+                                    iu++;
+                                }
+
+                            %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="grid_1">
+                ~.~
+            </div>
+
+            <div class="grid_11">
+                <div class="form_type frmRank">
+                    <h1>Rank Global</h1>
+                    <table>
+                        <tbody>
+                            <%                                for (Resultado gt : cdxz) {
+
+                            %>
+
+                            <tr><td><%=ix%>°</td><td><%=gt.getPontuacao()%></td></tr>
+
+                            <%
+
+                                    ix++;
+                                }
+
+                            %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</content>
