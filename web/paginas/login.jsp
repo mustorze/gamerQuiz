@@ -24,7 +24,7 @@
                             </div>
 
                             <div>
-                                <input type="text" placeholder="Senha" name="senha">
+                                <input type="password" placeholder="Senha" name="senha">
                             </div>
 
                         </div>

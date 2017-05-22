@@ -103,7 +103,7 @@
     
     <footer>
 
-        <div class="container_24">
+        <div class="container_24 footSkin">
 
             <div class="grid_8">
 
