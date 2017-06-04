@@ -71,6 +71,18 @@
             </div>
 
         </div>
+
+        <div class="grid_24">
+
+            <div class="dBtn" style="margin-top: 10px;">
+
+                <button class="btnS bntInit" style="border: none;">Voltar</button>
+                <button class="btnS bntGo" style="border: none;">Tentar Novamente</button>
+
+            </div>
+
+        </div>
+
     </div>
 
 </content>

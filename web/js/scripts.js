@@ -32,4 +32,12 @@ $(document).ready( function () {
         
     });
     
+    $(".bntGo").click( function(e) {
+       
+        e.preventDefault();
+        
+        window.location.href = "?p=quiz";
+        
+    });
+    
 } );
