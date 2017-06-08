@@ -1349,20 +1349,6 @@ CREATE TABLE `resultado` (
 -- Extraindo dados da tabela `resultado`
 --
 
-INSERT INTO `resultado` (`id`, `usuario_id`, `pontuacao`, `data`) VALUES
-(1, 2, 1, '2017-05-17 13:55:42'),
-(2, 1, 10, '2017-05-21 00:03:18'),
-(3, 1, 3, '2017-05-21 00:18:32'),
-(4, 1, 16, '2017-05-21 00:18:48'),
-(5, 1, 1, '2017-05-21 00:21:18'),
-(6, 1, 1, '2017-05-21 00:21:27'),
-(7, 1, 2, '2017-05-21 00:33:02'),
-(8, 3, 2, '2017-05-21 00:39:27'),
-(9, 6, 3, '2017-05-21 00:49:16'),
-(10, 1, 5, '2017-05-21 00:53:12'),
-(11, 9, 2, '2017-05-21 00:55:26'),
-(12, 10, 1, '2017-05-21 01:08:02');
-
 -- --------------------------------------------------------
 
 --
@@ -1383,11 +1369,7 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`id`, `email`, `senha`, `nome`, `admin`) VALUES
 (1, 'usuario@usuario.com', 'senha', 'Usuario', 0),
-(2, 'admin@admin.com', 'admin', 'Admin', 1),
-(3, 'lol@lol.com', 'lol', 'Lolzin', 0),
-(6, 'guifessel1@gmail.com', 'guilherme', 'Guilherme', 0),
-(9, 'thales.crisostomo@hotmail.com', 'meupenisgrandao', 'thaleskiller', 0),
-(10, 'steducci12@hotmail.com', 'senha123', 'Stefano', 0);
+(2, 'admin@admin.com', 'admin', 'Admin', 1);
 
 --
 -- Indexes for dumped tables
@@ -1447,12 +1429,12 @@ ALTER TABLE `pergunta`
 -- AUTO_INCREMENT for table `resultado`
 --
 ALTER TABLE `resultado`
-  MODIFY `id` mediumint(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` mediumint(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 --
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
