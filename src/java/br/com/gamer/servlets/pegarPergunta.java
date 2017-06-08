@@ -74,7 +74,7 @@ public class pegarPergunta extends HttpServlet {
             json.put("Descricao", perg.getDescricao());
             json.put("Categoria", csafds.getNome());
             json.put("Escolhas", jsArray);
-            json.put("Correta", jsArray.get(3));
+            json.put("Correta", perg.getCorreta());
 
             out.print(json.toString());
 

@@ -3,12 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Projects/Git/gamerQuiz%20-%20NetBeans%20Project/gamerQuiz/web/paginas/rank.jsp</file>
-            <file>file:/D:/Projects/Git/gamerQuiz%20-%20NetBeans%20Project/gamerQuiz/web/paginas/cadastro.jsp</file>
-            <file>file:/D:/Projects/Git/gamerQuiz%20-%20NetBeans%20Project/gamerQuiz/web/paginas/fim.jsp</file>
-            <file>file:/D:/Projects/Git/gamerQuiz%20-%20NetBeans%20Project/gamerQuiz/web/css/style.css</file>
-            <file>file:/D:/Projects/Git/gamerQuiz%20-%20NetBeans%20Project/gamerQuiz/web/paginas/login.jsp</file>
-            <file>file:/D:/Projects/Git/gamerQuiz%20-%20NetBeans%20Project/gamerQuiz/web/js/scripts.js</file>
+            <file>file:/C:/Users/Projeto%20integrado/Desktop/gamerQuiz/src/java/br/com/gamer/servlets/pegarPergunta.java</file>
+            <file>file:/C:/Users/Projeto%20integrado/Desktop/gamerQuiz/src/java/br/com/gamer/dao/usuarioDao.java</file>
+            <file>file:/C:/Users/Projeto%20integrado/Desktop/gamerQuiz/src/java/br/com/gamer/dao/cadastroDao.java</file>
+            <file>file:/C:/Users/Projeto%20integrado/Desktop/gamerQuiz/src/java/br/com/gamer/dao/perguntaDao.java</file>
+            <file>file:/C:/Users/Projeto%20integrado/Desktop/gamerQuiz/src/java/br/com/gamer/dao/Dao.java</file>
+            <file>file:/C:/Users/Projeto%20integrado/Desktop/gamerQuiz/src/java/br/com/gamer/dao/escolhaDao.java</file>
+            <file>file:/C:/Users/Projeto%20integrado/Desktop/gamerQuiz/src/java/br/com/gamer/dao/categoriaDao.java</file>
+            <file>file:/C:/Users/Projeto%20integrado/Desktop/gamerQuiz/src/java/br/com/gamer/dao/logout.java</file>
+            <file>file:/C:/Users/Projeto%20integrado/Desktop/gamerQuiz/src/java/br/com/gamer/dao/resultadoDao.java</file>
+            <file>file:/C:/Users/Projeto%20integrado/Desktop/gamerQuiz/src/java/br/com/gamer/dao/loginDao.java</file>
         </group>
     </open-files>
 </project-private>
